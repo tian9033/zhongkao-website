@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中考政策解读 - 中考咨询专家</title>
+    <meta name="description" content="专业解读最新中考政策，帮助学生和家长了解政策变化，合理规划备考策略">
+    <meta name="keywords" content="中考政策,政策解读,中考改革,招生政策">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><a href="index.html">中考咨询专家</a></h1>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="policy.html" class="active">政策解读</a></li>
+                        <li><a href="resources.html">备考资料</a></li>
+                        <li><a href="assessment.html">在线测评</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                        <li><a href="contact.html">联系我们</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 面包屑导航 -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li>政策解读</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 主要内容区域 -->
+    <main class="policy-main">
+        <div class="container">
+            <div class="policy-content">
+                <!-- 侧边栏筛选 -->
+                <aside class="policy-sidebar">
+                    <div class="filter-section">
+                        <h3>政策分类</h3>
+                        <ul class="filter-list">
+                            <li><a href="#" data-filter="all" class="active">全部政策</a></li>
+                            <li><a href="#" data-filter="exam">考试政策</a></li>
+                            <li><a href="#" data-filter="enrollment">招生政策</a></li>
+                            <li><a href="#" data-filter="reform">改革政策</a></li>
+                            <li><a href="#" data-filter="scoring">评分政策</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <h3>年份筛选</h3>
+                        <ul class="filter-list">
+                            <li><a href="#" data-year="2023" class="active">2023年</a></li>
+                            <li><a href="#" data-year="2022">2022年</a></li>
+                            <li><a href="#" data-year="2021">2021年</a></li>
+                            <li><a href="#" data-year="2020">2020年</a></li>
+                            <li><a href="#" data-year="archive">更早年份</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <h3>地区筛选</h3>
+                        <ul class="filter-list">
+                            <li><a href="#" data-region="national" class="active">全国性政策</a></li>
+                            <li><a href="#" data-region="beijing">北京市</a></li>
+                            <li><a href="#" data-region="shanghai">上海市</a></li>
+                            <li><a href="#" data-region="guangdong">广东省</a></li>
+                            <li><a href="#" data-region="zhejiang">浙江省</a></li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <!-- 政策列表区域 -->
+                <div class="policy-list-section">
+                    <!-- 搜索栏 -->
+                    <div class="policy-search">
+                        <div class="search-box">
+                            <input type="text" id="policy-search" placeholder="搜索政策标题或内容...">
+                            <button type="button" id="search-btn"><i class="fas fa-search"></i></button>
+                        </div>
+                        <div class="sort-options">
+                            <label for="sort-select">排序方式：</label>
+                            <select id="sort-select">
+                                <option value="latest">最新发布</option>
+                                <option value="popular">最受关注</option>
+                                <option value="title">标题排序</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- 政策列表 -->
+                    <div class="policy-list" id="policy-list">
+                        <!-- 政策项将通过JavaScript动态加载 -->
+                    </div>
+
+                    <!-- 分页 -->
+                    <div class="pagination">
+                        <button class="page-btn prev" disabled><i class="fas fa-chevron-left"></i></button>
+                        <div class="page-numbers">
+                            <button class="page-btn active">1</button>
+                            <button class="page-btn">2</button>
+                            <button class="page-btn">3</button>
+                            <span class="page-dots">...</span>
+                            <button class="page-btn">10</button>
+                        </div>
+                        <button class="page-btn next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 政策详情模态框 -->
+    <div id="policy-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">政策标题</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="policy-meta">
+                    <span class="policy-date"><i class="fas fa-calendar"></i> <span id="modal-date">发布日期</span></span>
+                    <span class="policy-category"><i class="fas fa-tag"></i> <span id="modal-category">政策分类</span></span>
+                    <span class="policy-views"><i class="fas fa-eye"></i> <span id="modal-views">浏览次数</span></span>
+                </div>
+                <div class="policy-content" id="modal-content">
+                    政策内容将在这里显示
+                </div>
+                <div class="policy-actions">
+                    <button class="btn btn-secondary" id="compare-btn"><i class="fas fa-balance-scale"></i> 政策对比</button>
+                    <button class="btn btn-secondary" id="share-btn"><i class="fas fa-share-alt"></i> 分享</button>
+                    <button class="btn btn-primary" id="download-btn"><i class="fas fa-download"></i> 下载PDF</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 政策对比模态框 -->
+    <div id="compare-modal" class="modal">
+        <div class="modal-content compare-modal">
+            <div class="modal-header">
+                <h2>政策对比</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="compare-container">
+                    <div class="compare-column">
+                        <h3>政策一</h3>
+                        <div class="compare-content" id="compare-content-1">
+                            请选择要对比的政策
+                        </div>
+                    </div>
+                    <div class="compare-column">
+                        <h3>政策二</h3>
+                        <div class="compare-content" id="compare-content-2">
+                            请选择要对比的政策
+                        </div>
+                    </div>
+                </div>
+                <div class="compare-actions">
+                    <button class="btn btn-secondary" id="add-to-compare">添加政策到对比</button>
+                    <button class="btn btn-primary" id="clear-compare">清空对比</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>中考咨询专家</h3>
+                    <p>专业提供中考政策解读、备考资料下载和在线测评系统，助力学生顺利通过中考</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-qq"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="policy.html">政策解读</a></li>
+                        <li><a href="resources.html">备考资料</a></li>
+                        <li><a href="assessment.html">在线测评</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>热门资源</h4>
+                    <ul>
+                        <li><a href="#">2023年中考真题</a></li>
+                        <li><a href="#">数学知识点总结</a></li>
+                        <li><a href="#">英语作文模板</a></li>
+                        <li><a href="#">物理实验视频</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> 400-123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@zhongkaozixun.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 北京市海淀区中关村大街1号</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 中考咨询专家 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript文件 -->
+    <script src="js/main.js"></script>
+    <script src="js/policy.js"></script>
+</body>
+</html>

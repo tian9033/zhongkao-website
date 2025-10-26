@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>备考资料下载 - 中考咨询专家</title>
+    <meta name="description" content="提供历年中考真题、模拟试题、知识点总结等丰富备考资源，助力学生高效复习">
+    <meta name="keywords" content="中考资料,备考资料,真题下载,模拟试题,知识点总结">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><a href="index.html">中考咨询专家</a></h1>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="policy.html">政策解读</a></li>
+                        <li><a href="resources.html" class="active">备考资料</a></li>
+                        <li><a href="assessment.html">在线测评</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                        <li><a href="contact.html">联系我们</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 面包屑导航 -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li>备考资料</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 主要内容区域 -->
+    <main class="resources-main">
+        <div class="container">
+            <div class="resources-content">
+                <!-- 侧边栏筛选 -->
+                <aside class="resources-sidebar">
+                    <div class="filter-section">
+                        <h3>资料分类</h3>
+                        <ul class="filter-list">
+                            <li><a href="#" data-filter="all" class="active">全部资料</a></li>
+                            <li><a href="#" data-filter="exam-papers">历年真题</a></li>
+                            <li><a href="#" data-filter="mock-tests">模拟试题</a></li>
+                            <li><a href="#" data-filter="knowledge-points">知识点总结</a></li>
+                            <li><a href="#" data-filter="study-guides">复习指南</a></li>
+                            <li><a href="#" data-filter="video-courses">视频课程</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <h3>科目筛选</h3>
+                        <ul class="filter-list">
+                            <li><a href="#" data-subject="all" class="active">全部科目</a></li>
+                            <li><a href="#" data-subject="chinese">语文</a></li>
+                            <li><a href="#" data-subject="math">数学</a></li>
+                            <li><a href="#" data-subject="english">英语</a></li>
+                            <li><a href="#" data-subject="physics">物理</a></li>
+                            <li><a href="#" data-subject="chemistry">化学</a></li>
+                            <li><a href="#" data-subject="biology">生物</a></li>
+                            <li><a href="#" data-subject="history">历史</a></li>
+                            <li><a href="#" data-subject="geography">地理</a></li>
+                            <li><a href="#" data-subject="politics">政治</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <h3>年份筛选</h3>
+                        <ul class="filter-list">
+                            <li><a href="#" data-year="2023" class="active">2023年</a></li>
+                            <li><a href="#" data-year="2022">2022年</a></li>
+                            <li><a href="#" data-year="2021">2021年</a></li>
+                            <li><a href="#" data-year="2020">2020年</a></li>
+                            <li><a href="#" data-year="archive">更早年份</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <h3>地区筛选</h3>
+                        <ul class="filter-list">
+                            <li><a href="#" data-region="all" class="active">全国通用</a></li>
+                            <li><a href="#" data-region="beijing">北京市</a></li>
+                            <li><a href="#" data-region="shanghai">上海市</a></li>
+                            <li><a href="#" data-region="guangdong">广东省</a></li>
+                            <li><a href="#" data-region="zhejiang">浙江省</a></li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <!-- 资料列表区域 -->
+                <div class="resources-list-section">
+                    <!-- 搜索栏 -->
+                    <div class="resources-search">
+                        <div class="search-box">
+                            <input type="text" id="resources-search" placeholder="搜索资料标题或内容...">
+                            <button type="button" id="search-btn"><i class="fas fa-search"></i></button>
+                        </div>
+                        <div class="sort-options">
+                            <label for="sort-select">排序方式：</label>
+                            <select id="sort-select">
+                                <option value="latest">最新上传</option>
+                                <option value="popular">最多下载</option>
+                                <option value="rating">评分最高</option>
+                                <option value="title">标题排序</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- 资料列表 -->
+                    <div class="resources-grid" id="resources-grid">
+                        <!-- 资料卡片将通过JavaScript动态加载 -->
+                    </div>
+
+                    <!-- 分页 -->
+                    <div class="pagination">
+                        <button class="page-btn prev" disabled><i class="fas fa-chevron-left"></i></button>
+                        <div class="page-numbers">
+                            <button class="page-btn active">1</button>
+                            <button class="page-btn">2</button>
+                            <button class="page-btn">3</button>
+                            <span class="page-dots">...</span>
+                            <button class="page-btn">10</button>
+                        </div>
+                        <button class="page-btn next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 资料详情模态框 -->
+    <div id="resource-modal" class="modal">
+        <div class="modal-content resource-modal">
+            <div class="modal-header">
+                <h2 id="modal-title">资料标题</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="resource-preview">
+                    <div class="preview-container" id="preview-container">
+                        <!-- 资料预览内容将在这里显示 -->
+                    </div>
+                </div>
+                <div class="resource-info">
+                    <div class="resource-meta">
+                        <span class="resource-category"><i class="fas fa-tag"></i> <span id="modal-category">资料分类</span></span>
+                        <span class="resource-subject"><i class="fas fa-book"></i> <span id="modal-subject">科目</span></span>
+                        <span class="resource-date"><i class="fas fa-calendar"></i> <span id="modal-date">上传日期</span></span>
+                        <span class="resource-size"><i class="fas fa-file"></i> <span id="modal-size">文件大小</span></span>
+                        <span class="resource-downloads"><i class="fas fa-download"></i> <span id="modal-downloads">下载次数</span></span>
+                    </div>
+                    <div class="resource-description" id="modal-description">
+                        资料描述将在这里显示
+                    </div>
+                    <div class="resource-rating">
+                        <h4>用户评分</h4>
+                        <div class="rating-stars" id="rating-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span class="rating-score">4.0</span>
+                            <span class="rating-count">(128人评价)</span>
+                        </div>
+                        <div class="user-rating">
+                            <span>您的评分：</span>
+                            <div class="user-rating-stars" id="user-rating-stars">
+                                <i class="far fa-star" data-rating="1"></i>
+                                <i class="far fa-star" data-rating="2"></i>
+                                <i class="far fa-star" data-rating="3"></i>
+                                <i class="far fa-star" data-rating="4"></i>
+                                <i class="far fa-star" data-rating="5"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="resource-comments">
+                        <h4>用户评论</h4>
+                        <div class="comment-form">
+                            <textarea id="comment-text" placeholder="请输入您的评论..."></textarea>
+                            <button class="btn btn-primary" id="submit-comment">提交评论</button>
+                        </div>
+                        <div class="comments-list" id="comments-list">
+                            <!-- 评论将通过JavaScript动态加载 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="favorite-btn"><i class="fas fa-heart"></i> 收藏</button>
+                <button class="btn btn-secondary" id="share-btn"><i class="fas fa-share-alt"></i> 分享</button>
+                <button class="btn btn-primary" id="download-btn"><i class="fas fa-download"></i> 下载资料</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>中考咨询专家</h3>
+                    <p>专业提供中考政策解读、备考资料下载和在线测评系统，助力学生顺利通过中考</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-qq"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="policy.html">政策解读</a></li>
+                        <li><a href="resources.html">备考资料</a></li>
+                        <li><a href="assessment.html">在线测评</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>热门资源</h4>
+                    <ul>
+                        <li><a href="#">2023年中考真题</a></li>
+                        <li><a href="#">数学知识点总结</a></li>
+                        <li><a href="#">英语作文模板</a></li>
+                        <li><a href="#">物理实验视频</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> 400-123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@zhongkaozixun.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 北京市海淀区中关村大街1号</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 中考咨询专家 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript文件 -->
+    <script src="js/main.js"></script>
+    <script src="js/resources.js"></script>
+</body>
+</html>

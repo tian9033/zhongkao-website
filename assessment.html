@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在线测评系统 - 中考咨询专家</title>
+    <meta name="description" content="科学的测评系统帮助学生了解自身学习水平，发现薄弱环节，针对性提升">
+    <meta name="keywords" content="中考测评,在线测试,学科能力评估,模拟考试">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><a href="index.html">中考咨询专家</a></h1>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="policy.html">政策解读</a></li>
+                        <li><a href="resources.html">备考资料</a></li>
+                        <li><a href="assessment.html" class="active">在线测评</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                        <li><a href="contact.html">联系我们</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 面包屑导航 -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li>在线测评</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 主要内容区域 -->
+    <main class="assessment-main">
+        <div class="container">
+            <!-- 测评选择页面 -->
+            <section class="assessment-selection" id="assessment-selection">
+                <div class="section-header">
+                    <h2>选择测评类型</h2>
+                    <p>根据您的需求选择合适的测评类型，全面了解学习状况</p>
+                </div>
+                
+                <div class="assessment-types">
+                    <div class="assessment-type-card" data-type="comprehensive">
+                        <div class="card-icon">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <h3>综合能力测评</h3>
+                        <p>全面评估各科目学习水平，发现整体优势和薄弱环节</p>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i> 涵盖所有中考科目</li>
+                            <li><i class="fas fa-check"></i> 详细能力分析报告</li>
+                            <li><i class="fas fa-check"></i> 个性化学习建议</li>
+                        </ul>
+                        <button class="btn btn-primary select-assessment" data-type="comprehensive">开始测评</button>
+                    </div>
+                    
+                    <div class="assessment-type-card" data-type="subject">
+                        <div class="card-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3>单科专项测评</h3>
+                        <p>针对特定科目进行深入测评，精准掌握学科能力</p>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i> 选择特定科目测评</li>
+                            <li><i class="fas fa-check"></i> 知识点掌握情况分析</li>
+                            <li><i class="fas fa-check"></i> 针对性提升建议</li>
+                        </ul>
+                        <button class="btn btn-primary select-assessment" data-type="subject">开始测评</button>
+                    </div>
+                    
+                    <div class="assessment-type-card" data-type="mock">
+                        <div class="card-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3>模拟考试</h3>
+                        <p>完全模拟中考考试环境和流程，提前适应考试节奏</p>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i> 真实考试环境模拟</li>
+                            <li><i class="fas fa-check"></i> 严格时间限制</li>
+                            <li><i class="fas fa-check"></i> 标准评分系统</li>
+                        </ul>
+                        <button class="btn btn-primary select-assessment" data-type="mock">开始测评</button>
+                    </div>
+                </div>
+                
+                <div class="recent-assessments">
+                    <h3>最近的测评记录</h3>
+                    <div class="recent-list" id="recent-assessments-list">
+                        <!-- 最近的测评记录将通过JavaScript动态加载 -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- 科目选择页面 -->
+            <section class="subject-selection" id="subject-selection" style="display: none;">
+                <div class="section-header">
+                    <h2>选择测评科目</h2>
+                    <p>请选择您想要测评的科目</p>
+                </div>
+                
+                <div class="subjects-grid">
+                    <div class="subject-card" data-subject="chinese">
+                        <div class="subject-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <h3>语文</h3>
+                        <p>测试语言文字运用能力、阅读理解和写作能力</p>
+                        <button class="btn btn-primary select-subject" data-subject="chinese">选择</button>
+                    </div>
+                    
+                    <div class="subject-card" data-subject="math">
+                        <div class="subject-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3>数学</h3>
+                        <p>测试数学基础知识、计算能力和解题思维</p>
+                        <button class="btn btn-primary select-subject" data-subject="math">选择</button>
+                    </div>
+                    
+                    <div class="subject-card" data-subject="english">
+                        <div class="subject-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>英语</h3>
+                        <p>测试英语听说读写能力和语言运用能力</p>
+                        <button class="btn btn-primary select-subject" data-subject="english">选择</button>
+                    </div>
+                    
+                    <div class="subject-card" data-subject="physics">
+                        <div class="subject-icon">
+                            <i class="fas fa-atom"></i>
+                        </div>
+                        <h3>物理</h3>
+                        <p>测试物理基础知识和实验分析能力</p>
+                        <button class="btn btn-primary select-subject" data-subject="physics">选择</button>
+                    </div>
+                    
+                    <div class="subject-card" data-subject="chemistry">
+                        <div class="subject-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h3>化学</h3>
+                        <p>测试化学基础知识和实验操作能力</p>
+                        <button class="btn btn-primary select-subject" data-subject="chemistry">选择</button>
+                    </div>
+                    
+                    <div class="subject-card" data-subject="biology">
+                        <div class="subject-icon">
+                            <i class="fas fa-dna"></i>
+                        </div>
+                        <h3>生物</h3>
+                        <p>测试生物基础知识和生命科学概念</p>
+                        <button class="btn btn-primary select-subject" data-subject="biology">选择</button>
+                    </div>
+                    
+                    <div class="subject-card" data-subject="history">
+                        <div class="subject-icon">
+                            <i class="fas fa-landmark"></i>
+                        </div>
+                        <h3>历史</h3>
+                        <p>测试历史知识和历史分析能力</p>
+                        <button class="btn btn-primary select-subject" data-subject="history">选择</button>
+                    </div>
+                    
+                    <div class="subject-card" data-subject="geography">
+                        <div class="subject-icon">
+                            <i class="fas fa-map"></i>
+                        </div>
+                        <h3>地理</h3>
+                        <p>测试地理知识和地理分析能力</p>
+                        <button class="btn btn-primary select-subject" data-subject="geography">选择</button>
+                    </div>
+                    
+                    <div class="subject-card" data-subject="politics">
+                        <div class="subject-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h3>政治</h3>
+                        <p>测试政治基础知识和理论分析能力</p>
+                        <button class="btn btn-primary select-subject" data-subject="politics">选择</button>
+                    </div>
+                </div>
+                
+                <div class="selection-actions">
+                    <button class="btn btn-secondary" id="back-to-types">返回</button>
+                </div>
+            </section>
+
+            <!-- 测评说明页面 -->
+            <section class="assessment-instructions" id="assessment-instructions" style="display: none;">
+                <div class="section-header">
+                    <h2>测评说明</h2>
+                    <p>请仔细阅读以下测评说明，确保顺利完成测评</p>
+                </div>
+                
+                <div class="instructions-content">
+                    <div class="instruction-item">
+                        <div class="instruction-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="instruction-text">
+                            <h3>测评时间</h3>
+                            <p id="assessment-time">本次测评预计需要60分钟完成</p>
+                        </div>
+                    </div>
+                    
+                    <div class="instruction-item">
+                        <div class="instruction-icon">
+                            <i class="fas fa-list-ol"></i>
+                        </div>
+                        <div class="instruction-text">
+                            <h3>题目数量</h3>
+                            <p id="assessment-questions">本次测评共包含50道题目</p>
+                        </div>
+                    </div>
+                    
+                    <div class="instruction-item">
+                        <div class="instruction-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <div class="instruction-text">
+                            <h3>设备要求</h3>
+                            <p>请确保您的设备网络连接稳定，浏览器版本较新</p>
+                        </div>
+                    </div>
+                    
+                    <div class="instruction-item">
+                        <div class="instruction-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="instruction-text">
+                            <h3>注意事项</h3>
+                            <ul>
+                                <li>测评过程中请勿刷新页面或关闭浏览器</li>
+                                <li>每道题目只有一次作答机会</li>
+                                <li>系统会自动保存您的答题进度</li>
+                                <li>测评时间结束后系统将自动提交</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="instructions-actions">
+                    <button class="btn btn-secondary" id="back-to-selection">返回</button>
+                    <button class="btn btn-primary" id="start-assessment">开始测评</button>
+                </div>
+            </section>
+
+            <!-- 测评进行页面 -->
+            <section class="assessment-test" id="assessment-test" style="display: none;">
+                <div class="test-header">
+                    <div class="test-info">
+                        <h3 id="test-title">综合能力测评</h3>
+                        <div class="test-timer">
+                            <i class="fas fa-clock"></i>
+                            <span id="time-remaining">59:59</span>
+                        </div>
+                    </div>
+                    <div class="test-progress">
+                        <div class="progress-info">
+                            <span id="current-question">1</span> / <span id="total-questions">50</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-fill" style="width: 2%;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="test-content">
+                    <div class="question-container" id="question-container">
+                        <!-- 题目内容将通过JavaScript动态加载 -->
+                    </div>
+                    
+                    <div class="test-navigation">
+                        <button class="btn btn-secondary" id="prev-question" disabled>上一题</button>
+                        <button class="btn btn-secondary" id="mark-question">标记</button>
+                        <button class="btn btn-primary" id="next-question">下一题</button>
+                        <button class="btn btn-success" id="submit-test" style="display: none;">提交测评</button>
+                    </div>
+                </div>
+                
+                <div class="test-sidebar">
+                    <div class="question-navigator" id="question-navigator">
+                        <!-- 题目导航将通过JavaScript动态生成 -->
+                    </div>
+                    <div class="test-summary">
+                        <h4>答题情况</h4>
+                        <div class="summary-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">已答题：</span>
+                                <span class="stat-value" id="answered-count">0</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">未答题：</span>
+                                <span class="stat-value" id="unanswered-count">50</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">已标记：</span>
+                                <span class="stat-value" id="marked-count">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 测评结果页面 -->
+            <section class="assessment-results" id="assessment-results" style="display: none;">
+                <div class="section-header">
+                    <h2>测评结果</h2>
+                    <p>您的测评已完成，以下是详细的分析报告</p>
+                </div>
+                
+                <div class="results-summary">
+                    <div class="score-circle">
+                        <div class="score-value" id="total-score">85</div>
+                        <div class="score-label">总分</div>
+                    </div>
+                    <div class="summary-details">
+                        <div class="detail-item">
+                            <span class="detail-label">正确率：</span>
+                            <span class="detail-value" id="accuracy-rate">85%</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">完成时间：</span>
+                            <span class="detail-value" id="completion-time">48分32秒</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">排名：</span>
+                            <span class="detail-value" id="ranking">前15%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="results-analysis">
+                    <h3>能力分析</h3>
+                    <div class="analysis-chart" id="analysis-chart">
+                        <!-- 能力分析图表将通过JavaScript动态生成 -->
+                    </div>
+                </div>
+                
+                <div class="results-suggestions">
+                    <h3>学习建议</h3>
+                    <div class="suggestions-list" id="suggestions-list">
+                        <!-- 学习建议将通过JavaScript动态生成 -->
+                    </div>
+                </div>
+                
+                <div class="results-actions">
+                    <button class="btn btn-secondary" id="view-details">查看详情</button>
+                    <button class="btn btn-secondary" id="download-report">下载报告</button>
+                    <button class="btn btn-primary" id="new-assessment">新的测评</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>中考咨询专家</h3>
+                    <p>专业提供中考政策解读、备考资料下载和在线测评系统，助力学生顺利通过中考</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-qq"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="policy.html">政策解读</a></li>
+                        <li><a href="resources.html">备考资料</a></li>
+                        <li><a href="assessment.html">在线测评</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>热门资源</h4>
+                    <ul>
+                        <li><a href="#">2023年中考真题</a></li>
+                        <li><a href="#">数学知识点总结</a></li>
+                        <li><a href="#">英语作文模板</a></li>
+                        <li><a href="#">物理实验视频</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> 400-123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@zhongkaozixun.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 北京市海淀区中关村大街1号</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 中考咨询专家 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript文件 -->
+    <script src="js/main.js"></script>
+    <script src="js/assessment.js"></script>
+</body>
+</html>

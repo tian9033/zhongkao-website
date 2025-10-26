@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中考咨询专家 - 专业中考政策解读与备考指导</title>
+    <meta name="description" content="专业提供中考政策解读、备考资料下载和在线测评系统，助力学生顺利通过中考">
+    <meta name="keywords" content="中考,中考政策,备考资料,在线测评,中考咨询">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><a href="index.html">中考咨询专家</a></h1>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html" class="active">首页</a></li>
+                        <li><a href="policy.html">政策解读</a></li>
+                        <li><a href="resources.html">备考资料</a></li>
+                        <li><a href="assessment.html">在线测评</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                        <li><a href="contact.html">联系我们</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main>
+        <!-- 轮播图区域 -->
+        <section class="hero-section">
+            <div class="slider">
+                <div class="slide active">
+                    <div class="slide-content">
+                        <h2>专业中考政策解读</h2>
+                        <p>第一时间掌握最新中考政策变化，为备考提供准确指导</p>
+                        <a href="policy.html" class="btn btn-primary">查看政策解读</a>
+                    </div>
+                    <div class="slide-image">
+                        <img src="assets/images/policy-slide.jpg" alt="中考政策解读">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <h2>优质备考资料下载</h2>
+                        <p>精选历年真题、模拟试题和知识点总结，助力高效备考</p>
+                        <a href="resources.html" class="btn btn-primary">下载备考资料</a>
+                    </div>
+                    <div class="slide-image">
+                        <img src="assets/images/resources-slide.jpg" alt="备考资料">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <h2>智能在线测评系统</h2>
+                        <p>科学评估学习水平，针对性提升薄弱环节</p>
+                        <a href="assessment.html" class="btn btn-primary">开始在线测评</a>
+                    </div>
+                    <div class="slide-image">
+                        <img src="assets/images/assessment-slide.jpg" alt="在线测评">
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="slider-indicators"></div>
+        </section>
+
+        <!-- 核心服务介绍 -->
+        <section class="services-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>核心服务</h2>
+                    <p>为中考学生提供全方位的专业服务</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3>政策解读</h3>
+                        <p>专业团队解读最新中考政策，帮助学生和家长了解政策变化，合理规划备考策略</p>
+                        <a href="policy.html" class="btn btn-secondary">了解更多</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <h3>备考资料</h3>
+                        <p>提供历年真题、模拟试题、知识点总结等丰富备考资源，助力学生高效复习</p>
+                        <a href="resources.html" class="btn btn-secondary">浏览资料</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <h3>在线测评</h3>
+                        <p>科学的测评系统帮助学生了解自身学习水平，发现薄弱环节，针对性提升</p>
+                        <a href="assessment.html" class="btn btn-secondary">开始测评</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 最新政策动态 -->
+        <section class="latest-policies-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>最新政策动态</h2>
+                    <p>及时了解中考政策变化，把握备考方向</p>
+                </div>
+                <div class="policies-grid" id="latest-policies">
+                    <!-- 政策内容将通过JavaScript动态加载 -->
+                </div>
+                <div class="section-footer">
+                    <a href="policy.html" class="btn btn-outline">查看全部政策</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 热门备考资料 -->
+        <section class="popular-resources-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>热门备考资料</h2>
+                    <p>精选优质备考资源，助力高效复习</p>
+                </div>
+                <div class="resources-grid" id="popular-resources">
+                    <!-- 资料内容将通过JavaScript动态加载 -->
+                </div>
+                <div class="section-footer">
+                    <a href="resources.html" class="btn btn-outline">浏览全部资料</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 成功案例 -->
+        <section class="success-cases-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>成功案例</h2>
+                    <p>看看其他学生如何通过我们的服务取得优异成绩</p>
+                </div>
+                <div class="cases-grid">
+                    <div class="case-card">
+                        <div class="case-image">
+                            <img src="assets/images/case1.jpg" alt="成功案例1">
+                        </div>
+                        <div class="case-content">
+                            <h3>李明同学</h3>
+                            <p>通过我们的政策解读和备考资料，成功考入理想高中</p>
+                            <div class="case-result">
+                                <span class="score">总分：680分</span>
+                                <span class="school">录取学校：市重点中学</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-card">
+                        <div class="case-image">
+                            <img src="assets/images/case2.jpg" alt="成功案例2">
+                        </div>
+                        <div class="case-content">
+                            <h3>王红同学</h3>
+                            <p>利用在线测评系统发现薄弱环节，针对性提升成绩</p>
+                            <div class="case-result">
+                                <span class="score">总分：695分</span>
+                                <span class="school">录取学校：省重点中学</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-card">
+                        <div class="case-image">
+                            <img src="assets/images/case3.jpg" alt="成功案例3">
+                        </div>
+                        <div class="case-content">
+                            <h3>张强同学</h3>
+                            <p>通过全面备考，成绩提升120分，实现逆袭</p>
+                            <div class="case-result">
+                                <span class="score">总分：670分</span>
+                                <span class="school">录取学校：区重点中学</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联系我们区域 -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>联系我们</h2>
+                    <p>有任何问题，欢迎随时联系我们</p>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>地址</h4>
+                                <p>北京市海淀区中关村大街1号</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>电话</h4>
+                                <p>400-123-4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>邮箱</h4>
+                                <p>info@zhongkaozixun.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>工作时间</h4>
+                                <p>周一至周五 9:00-18:00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <h3>在线咨询</h3>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="您的姓名" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="phone" name="phone" placeholder="您的电话" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="您的邮箱">
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" placeholder="请输入您的咨询内容" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">提交咨询</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>中考咨询专家</h3>
+                    <p>专业提供中考政策解读、备考资料下载和在线测评系统，助力学生顺利通过中考</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-qq"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="policy.html">政策解读</a></li>
+                        <li><a href="resources.html">备考资料</a></li>
+                        <li><a href="assessment.html">在线测评</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>热门资源</h4>
+                    <ul>
+                        <li><a href="#">2023年中考真题</a></li>
+                        <li><a href="#">数学知识点总结</a></li>
+                        <li><a href="#">英语作文模板</a></li>
+                        <li><a href="#">物理实验视频</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> 400-123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@zhongkaozixun.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 北京市海淀区中关村大街1号</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 中考咨询专家 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript文件 -->
+    <script src="js/main.js"></script>
+</body>
+</html>
